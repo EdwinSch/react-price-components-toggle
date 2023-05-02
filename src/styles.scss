@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+$background: #f7f7fe;
+$purpleGradient: linear-gradient(135.06deg, #a2a7f0 -0.05%, #696edd 100.05%);
+
+body {
+  background: $background;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+}
