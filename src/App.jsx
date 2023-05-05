@@ -2,6 +2,7 @@ import "./styles.scss";
 import "./switch.scss";
 
 import Card from "./components/Card";
+import Switch from "./components/Switch";
 import bgBottom from "./assets/bg-bottom.svg";
 import bgTop from "./assets/bg-top.svg";
 
@@ -16,14 +17,10 @@ function App() {
         <h1>Our Pricing</h1>
         <section className="switch-wrapper">
           <p>Annually</p>
-          {/* Switch */}
-          <label className="switch">
-            <input
-              type="checkbox"
-              onClick={() => setShowSubsciption(!showSubsciption)}
-            />
-            <span className="slider round"></span>
-          </label>
+          <Switch
+            showSubsciption={showSubsciption}
+            setShowSubsciption={setShowSubsciption}
+          />
           <p>Monthly</p>
         </section>
         <section className="cards-wrapper">
