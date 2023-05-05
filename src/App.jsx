@@ -1,5 +1,4 @@
 import "./styles.scss";
-import "./switch.scss";
 
 import Card from "./components/Card";
 import Switch from "./components/Switch";

@@ -1,5 +1,5 @@
-## Price component with toggle (React)
+## Price components with toggle (React)
 
-descr
+A small React project with a custom build switch, toggling between price data. Showcasing: states, conditional rendering and handling component props. Made in Vite + SASS.
 
 🚀 [Deployed Version](https://)
