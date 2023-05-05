@@ -4,28 +4,70 @@
   margin: 0;
 }
 
+// --- GENERAL
+
 $background: #f7f7fe;
 $purpleGradient: linear-gradient(135.06deg, #a2a7f0 -0.05%, #696edd 100.05%);
 $inspect: solid red 1px;
+$font: "Montserrat", sans-serif;
 
 body {
   height: 100vh;
   background: $background;
   color: black;
-  font-family: "Montserrat", sans-serif;
+  font-family: $font;
   position: relative;
+  .bg-bottom {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  .bg-top {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+main {
+  padding-top: 71px;
+}
+
+// --- HEADING
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #6e728e;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+// --- CARDS
+
+.round-left {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.round-right {
+  border-radius: 0px 10px 10px 0px;
 }
 
 .cards-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   //   border: $inspect;
 }
+
+// Card
+
 .card {
   width: 350px;
   height: 453px;
   background: white;
-  border: $inspect;
   padding: 31px;
-
   h2 {
     font-size: 1.1rem;
     color: #6e728e;
@@ -33,6 +75,8 @@ body {
     text-align: center;
   }
   .price {
+    margin-top: 24px;
+
     color: #4a4d60;
     font-size: 4.5rem;
     font-weight: 700;
@@ -46,6 +90,7 @@ body {
   }
 
   .features-wrapper {
+    margin: 32px 0;
     border-top: 1px solid rgba(110, 114, 142, 0.25);
     .feature {
       text-align: center;
@@ -56,14 +101,86 @@ body {
       font-weight: 700;
     }
   }
+  .learn-more {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: $purpleGradient;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 0.81rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+    transition: 250ms ease;
+  }
+  .learn-more:hover {
+    background: white;
+    color: #6d72de;
+    border: 1px solid #6d72de;
+  }
 }
-.bg-bottom {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-.bg-top {
-  position: absolute;
-  right: 0;
-  top: 0;
+
+// Card Inverted
+
+.card-invert {
+  width: 350px;
+  height: 501px;
+  background: $purpleGradient;
+  padding: 55px 31px;
+  border-radius: 10px;
+  h2 {
+    font-size: 1.1rem;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+  }
+  .price {
+    margin-top: 24px;
+    color: white;
+    font-size: 4.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    span {
+      font-size: 2.5rem;
+    }
+  }
+
+  .features-wrapper {
+    margin: 32px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    .feature {
+      text-align: center;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+      color: white;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+  }
+  .learn-more {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    background: white;
+    cursor: pointer;
+    font-family: $font;
+    font-size: 0.81rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #6d72de;
+    transition: 250ms ease;
+  }
+  .learn-more:hover {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+  }
 }
