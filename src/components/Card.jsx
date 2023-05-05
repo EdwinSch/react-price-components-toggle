@@ -1,15 +1,15 @@
-const Card = (props) => {
+const Card = ({ stylingClass, title, price, storage, users, send }) => {
   return (
-    <article className={props.class}>
-      <h2>{props.title}</h2>
+    <article className={stylingClass}>
+      <h2>{title}</h2>
       <p className="price">
         <span>$</span>
-        {props.price}
+        {price}
       </p>
       <div className="features-wrapper">
-        <p className="feature">{props.storage} Storage</p>
-        <p className="feature">{props.users} Users Allowed</p>
-        <p className="feature">Send up to {props.send} GB</p>
+        <p className="feature">{storage} Storage</p>
+        <p className="feature">{users} Users Allowed</p>
+        <p className="feature">Send up to {send} GB</p>
       </div>
       <button className="learn-more" type="button">
         learn more

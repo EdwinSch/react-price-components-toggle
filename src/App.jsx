@@ -1,41 +1,51 @@
 import "./styles.scss";
+import "./switch.scss";
 import bgBottom from "./assets/bg-bottom.svg";
 import bgTop from "./assets/bg-top.svg";
 
 import Card from "./components/Card";
-import Switch from "./components/Switch";
+import { useState } from "react";
 
 function App() {
+  const [showSubsciption, setShowSubsciption] = useState(false);
+
   return (
     <>
       <main>
         <h1>Our Pricing</h1>
         <section className="switch-wrapper">
           <p>Annually</p>
-          <Switch />
+          {/* Switch */}
+          <label className="switch">
+            <input
+              type="checkbox"
+              onClick={() => setShowSubsciption(!showSubsciption)}
+            />
+            <span className="slider round"></span>
+          </label>
           <p>Monthly</p>
         </section>
         <section className="cards-wrapper">
           <Card
-            class="card round-left"
+            stylingClass="card round-left"
             title="basic"
-            price="19.99"
+            price={showSubsciption ? "19.99" : "190.99"}
             storage="500 GB"
             users="2"
             send="3"
           />
           <Card
-            class="card-invert"
+            stylingClass="card-invert"
             title="professional"
-            price="24.99"
+            price={showSubsciption ? "24.99" : "249.99"}
             storage="1 TB"
             users="5"
             send="10"
           />
           <Card
-            class="card round-right"
+            stylingClass="card round-right"
             title="master"
-            price="39.99"
+            price={showSubsciption ? "39.99" : "399.99"}
             storage="2 TB"
             users="10"
             send="20"
