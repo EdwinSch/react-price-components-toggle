@@ -1,9 +1,10 @@
 import "./styles.scss";
 import "./switch.scss";
+
+import Card from "./components/Card";
 import bgBottom from "./assets/bg-bottom.svg";
 import bgTop from "./assets/bg-top.svg";
 
-import Card from "./components/Card";
 import { useState } from "react";
 
 function App() {

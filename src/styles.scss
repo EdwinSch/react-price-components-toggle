@@ -10,6 +10,7 @@ $background: #f7f7fe;
 $purpleGradient: linear-gradient(135.06deg, #a2a7f0 -0.05%, #696edd 100.05%);
 $inspect: solid red 1px;
 $font: "Montserrat", sans-serif;
+$shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
 
 body {
   height: 100vh;
@@ -46,7 +47,6 @@ h1 {
 
 // --- SWITCH
 .switch-wrapper {
-  //   border: $inspect;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,12 +73,12 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  //   border: $inspect;
 }
 
 // Card
 
 .card {
+  box-shadow: $shadow;
   width: 350px;
   height: 453px;
   background: white;
@@ -91,7 +91,6 @@ h1 {
   }
   .price {
     margin-top: 24px;
-
     color: #4a4d60;
     font-size: 4.5rem;
     font-weight: 700;
@@ -141,6 +140,7 @@ h1 {
 // Card Inverted
 
 .card-invert {
+  box-shadow: $shadow;
   width: 350px;
   height: 501px;
   background: $purpleGradient;
@@ -197,5 +197,57 @@ h1 {
     background: transparent;
     color: white;
     border: 1px solid white;
+  }
+}
+
+// Responsive
+
+@media only screen and (max-width: 1000px) {
+  body {
+    height: 100%;
+    .bg-bottom {
+      display: none;
+    }
+  }
+
+  main {
+    padding: 64px 0;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .card {
+    width: 327px;
+    padding: 29px;
+    border-radius: 10px;
+  }
+
+  .card-invert {
+    width: 327px;
+    height: 453px;
+    padding: 29px;
+  }
+}
+
+@media only screen and (max-width: 336px) {
+  .card {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    .price {
+      font-size: 3rem;
+    }
+  }
+  .card-invert {
+    width: 100%;
+    height: 100%;
+
+    padding: 20px;
+    .price {
+      font-size: 3rem;
+    }
   }
 }
