@@ -44,6 +44,21 @@ h1 {
   margin-bottom: 40px;
 }
 
+// --- SWITCH
+.switch-wrapper {
+  //   border: $inspect;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 64px;
+  p {
+    font-size: 0.93rem;
+    font-weight: 700;
+    color: rgba(110, 114, 142, 0.5);
+  }
+}
+
 // --- CARDS
 
 .round-left {

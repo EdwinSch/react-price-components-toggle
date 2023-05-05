@@ -3,13 +3,18 @@ import bgBottom from "./assets/bg-bottom.svg";
 import bgTop from "./assets/bg-top.svg";
 
 import Card from "./components/Card";
+import Switch from "./components/Switch";
 
 function App() {
   return (
     <>
       <main>
         <h1>Our Pricing</h1>
-        <section className="switch-wrapper">{/* // toggler */}</section>
+        <section className="switch-wrapper">
+          <p>Annually</p>
+          <Switch />
+          <p>Monthly</p>
+        </section>
         <section className="cards-wrapper">
           <Card
             class="card round-left"
